@@ -1,0 +1,34 @@
+git commit -m "My PythonProject app, first commit"
+
+usuario senha administracao django local
+user admin senha imlost01
+
+
+interromper o seu servidor  CTRL+C
+
+
+
+servidor web executando= python manage.py runserver:
+
+pa_autoconfigure_django.py https://github.com/EwertonMoraes/Blog-NacionalMM2019/tree/master/blogNacionalMM2019.git
+
+git hub Blog-NacionalMM2019
+
+
+api token 15d1150b37c9ea97a2d256ab380b1413c4c533a6
+
+import requests
+my_domain = 'nacionalmangalargamarchador.pythonanywhere.com'
+username = 'nacionalmangalargamarchador'
+token = '15d1150b37c9ea97a2d256ab380b1413c4c533a6'
+
+response = requests.post(
+  'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain}/reload/'.format(
+      username=username, domain=my_domain
+  ),
+  headers={'Authorization': 'Token {token}'.format(token=token)}
+)
+if response.status_code == 200:
+  print('All OK')
+else:
+  print('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
